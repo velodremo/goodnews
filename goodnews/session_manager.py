@@ -11,7 +11,7 @@ import facebook
 
 class session_manager:
 
-    def __init__(self, last_ts):
+    def __init__(self, last_ts, access_token):
         self.__arts = dict()
         self.__last_ts = last_ts
         self.__newsapi_key = '4feda0ca546e41e680d201a64ee91ae3'
@@ -24,7 +24,7 @@ class session_manager:
     def get_fb_articles(self):
 
         opener = ur.build_opener(ur.HTTPCookieProcessor)
-        graph = facebook.GraphAPI(access_token='EAACEdEose0cBAOJw8OCreyZBplpT5vbNbgJ0rInDuWBZARUZCGvaGpSN0psbSKKas5ZCVOk8ZAGIHORyBkYdrTpku7333AyCcmGgqsnz6BwP0pfNGyRQgF0SMRWEY2eOxkuvWRT4xtiWXjihcfxPhHomzXVtsz926o6ZAtIiW0CbLA4iCeeqMV', version='2.7')
+        graph = facebook.GraphAPI(access_token = access_token, version='2.7')
         # page_ids = {'bbc':'228735667216', 'skynews':'164665060214766', 'buzzfeed':'618786471475708'}
 
         page_ids = ['155869377766434', '164665060214766', '618786471475708']
