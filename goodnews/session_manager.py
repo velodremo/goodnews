@@ -20,11 +20,12 @@ class session_manager:
                          '=latest' \
                 '&apiKey=4feda0ca546e41e680d201a64ee91ae3'
         self.__rss_url = ""
+        self.__fb_access_token = access_token
 
     def get_fb_articles(self):
 
         opener = ur.build_opener(ur.HTTPCookieProcessor)
-        graph = facebook.GraphAPI(access_token = access_token, version='2.7')
+        graph = facebook.GraphAPI(access_token = self.__fb_access_token, version='2.7')
         # page_ids = {'bbc':'228735667216', 'skynews':'164665060214766', 'buzzfeed':'618786471475708'}
 
         page_ids = ['155869377766434', '164665060214766', '618786471475708']
