@@ -1,0 +1,6 @@
+A sentiment-based good news app, which uses sentiment analysis tools and the Facebook Graph API
+to extract user "reactions" for posts on news sites.
+
+files:
+  goodnews/session_manager.py - the main class, which loads the articles and runs
+                                the sentiment analysis logic.
